@@ -1,0 +1,73 @@
+#frame {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 510px;
+    width: 504px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+}
+
+#display {
+    height: 100px;
+    width: 501px;
+    text-align: right;
+    word-wrap: break-word;
+    font-family: 'Orbitron';
+    font-size: 60px;
+    color: rgb(167, 253, 29);
+    background-color: black;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+}
+
+#buttonbox {
+    height: 400px;
+    width: 297px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+}
+
+#operatorbox {
+    height: 400px;
+    width: 195px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+}
+
+.number, .clear, .execute{
+    height: 100px;
+    width: 99px;
+    font-size: 40px;
+    outline: none;
+    background-color: rgba(211, 211, 211, 0.918)
+}
+
+.operator, .decimal, .bracket{
+    height: 100px;
+    width: 97px;
+    font-size: 40px;
+    outline: none;
+    background-color:  rgba(231, 229, 229, 0.918)
+}
+
+.backspace {
+    height: 100px;
+    width: 195px;
+    font-size: 40px;
+    outline: none;
+    background-color: rgba(231, 229, 229, 0.918)
+}
