@@ -285,8 +285,6 @@ function evaluate (entry) {
         equation.unshift("0");
     }
 
-    console.log(equation);
-
     /* order of operations - evaluates brackets first and rebuilds equation */
 
     while (equation.findIndex(testOpBrkt) != -1) {
