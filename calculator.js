@@ -188,7 +188,6 @@ backspace.forEach((backspace) => {
             }
 
             subPiece=entry.substring(lastPos, entry.length-1);
-            console.log(subPiece);
 
             if (subPiece.lastIndexOf('.')!=-1) {
                 alert("test");
@@ -211,6 +210,8 @@ clear.forEach((clear) => {
         opToggle=false;
         btnToggle=true;
         decToggle=true;
+        brktBlock=false;
+        brktToggle=true;
         displayContent.style.fontSize='60px';
         display(entry);
     });
@@ -280,6 +281,12 @@ function evaluate (entry) {
         equation.push(operand);
     }
 
+    if (equation[0]=="-") {
+        equation.unshift("0");
+    }
+
+    console.log(equation);
+
     /* order of operations - evaluates brackets first and rebuilds equation */
 
     while (equation.findIndex(testOpBrkt) != -1) {
@@ -329,7 +336,6 @@ function evaluate (entry) {
     while (equation.findIndex(testDiv) != -1) {
 
         if (equation[equation.findIndex(testDiv)+1]=='0') {
-            console.log(equation[equation.findIndex(testDiv)+1]);
             return "CAN'T DIVIDE BY 0!! START OVER";
         }
 
